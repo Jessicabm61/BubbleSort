@@ -5,7 +5,12 @@
 
 int main(int argc, char *argv[]) {
 	
-	srand ( time (0));
+	srand ( time (0)); /* srand(time(NULL)) objetiva inicializar o gerador de números aleatórios
+  com o valor da função time(NULL). Este por sua vez, é calculado
+  como sendo o total de segundos passados desde 1 de janeiro de 1970
+  até a data atual.
+  Desta forma, a cada execução o valor da "semente" será diferente.
+  */
 	
 	int i;
 	int v[MAX];
@@ -17,8 +22,8 @@ int main(int argc, char *argv[]) {
 		printf ("%d: %d\n", i, v[i]);
 	}	
 	
-	//Ordena��o usando o BubbleSort 
-	//N�meros grandes sobem rapidamente
+	//Ordenação usando o BubbleSort 
+	//Números grandes sobem rapidamente
  
 	int fez_troca;
 	do {
@@ -38,7 +43,7 @@ printf ("---------vetor ordenado\n");
 		printf ("%d\n", v[i]);
 	}
 
-//Procura uma chave no vetor ordenado - Busca bin�ria
+//Procura uma chave no vetor ordenado - Busca binária
 int chave;
 printf ("Digite um valor a ser buscado: \n");
 scanf ("%d", &chave);
